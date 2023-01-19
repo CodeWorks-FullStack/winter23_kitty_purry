@@ -1,0 +1,81 @@
+/* SECTION variables */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+:root{
+  --bright-pink: #FE0AE5;
+  --fuschia: #5A0069;
+}
+
+/* SECTION element selectors */
+
+*{
+  font-family: 'Holtwood One SC', serif;
+}
+
+header, footer{
+  background-color: var(--fuschia);
+}
+
+h1{
+  color: var(--bright-pink);
+}
+
+/* SECTION classes */
+
+.bg-kitten{
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1570824104453-508955ab713e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1311&q=80);
+}
+
+.kitten-card{
+  background-color: #59006948;
+}
+
+.bg-bright-pink{
+  background-color: var(--bright-pink);
+}
+
+.border-left-and-right{
+  border-color: black;
+  border-width: 2px;
+  border-style: hidden solid;
+}
+
+.cat-img{
+  height: 20vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.agressive-shadow{
+  box-shadow: 5px 5px 10px black;
+}
+
+.magic-button{
+  transform: translateY(-1.4vh);
+}
+
+/* SECTION media query */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries */
+
+
+@media screen and (max-width: 768px) {
+  .bg-kitten{
+    background-image: url(https://images.unsplash.com/photo-1623645481161-0d8160281cbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=671&q=80);
+  }
+
+  .border-left-and-right{
+    border-style: hidden;
+  }
+
+  .border-top-and-bottom{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid hidden;
+  }
+
+  .cat-img{
+    height: 30vh;
+  }
+}
